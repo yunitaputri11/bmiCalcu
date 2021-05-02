@@ -1,0 +1,36 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+*{
+	box-sizing:border-box;
+	line-height: 30px;
+}
+a {
+  color: #00B7FF;
+}
+
+table{
+	border-collapse: collapse;
+}
+
+.result {
+    padding: 20px;
+    border: solid 1px #c5c5c5;
+    background: #fbfbfb;
+}
+
+input, button{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    border: solid 1px #d6d6d6;
+	outline: none;
+}
+
+button {
+    cursor: pointer;
+    background: #00bdff;
+    color: #fff;
+}

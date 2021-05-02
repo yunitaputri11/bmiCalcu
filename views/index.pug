@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	h1(style='text-align:center')
+		a(href='#{baseUrl}', style='text-decoration:none;')= title
+	p 
+	
+	form(action='/calculate', method='post', style="margin:auto;display:table")
+		input(type='text', name='Tberat', placeholder='Berat Badan (Kg)')
+		input(type='text', name='Ttinggi', placeholder='Tinggi Badan (Cm)')
+		button(type='submit', name='btn_submit') HITUNG
+	- if (typeof(result) !== 'undefined'){
+		- if (berat > 0 && tinggi > 0){
+			div(class='result')
+				h3(style='text-align:center;') Hasil : 
+					b(style='color:#{color}') #{tubuh}
+				p
+				table(class='tb-detail',style="margin:auto")
+					tr
+						td Berat
+						td :
+						td #{berat} Kg
+					tr
+						td Tinggi
+						td :
+						td #{tinggi} Cm
+					tr
+						td BMI
+						td :
+						td #{bmi} Kg/m2
+				
+		- }	else {
+			p Nilai tinggi dan berat badan harus lebih dari 0
+		-}
+	-}
